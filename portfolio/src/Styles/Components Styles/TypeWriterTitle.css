@@ -1,0 +1,17 @@
+.title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-family: var(--title-font);
+    font-weight: 500;
+}
+
+.Typewriter__wrapper {
+    font-family: var(--title-font);
+    font-weight: 400;
+    font-style: italic;
+}

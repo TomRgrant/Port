@@ -1,4 +1,6 @@
 import React from "react";
+import TypeWriterTitle from "../Components/TypeWriterTItle";
+
 
 function Home() {
 
@@ -7,7 +9,7 @@ function Home() {
 
 
         <>
-        <h1>test</h1>
+        <TypeWriterTitle/>
         </>
     )
 }
