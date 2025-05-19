@@ -9,17 +9,24 @@ function TypeWriterTitle() {
 
     <section className="title-wrapper">
 
-        <h1 className="title">Valves</h1>
+      <Typewriter
+        onInit={(typewriter) => {
+          typewriter
+            .typeString(">Intilising...<br>")
+            .pauseFor(1000)
+            .typeString(">Loading Thomas_Grant_Portfolio...")
+            .start(); // just type and stop
+        }}
+        options={{
+          autoStart: true,
+          loop: false,
+          delay: 50, // typing speed
+          cursor: "" // optional
+        }}
+      />
 
-        <Typewriter className="sub-heading"
-            options={{
-            strings: ["Ball", "Gate", "Butterfly"],
-            autoStart: true,
-            loop: true,
-            deleteSpeed: 100,
-            }}
-        />
-      </section>
+        
+    </section>
     </>
   );
 }

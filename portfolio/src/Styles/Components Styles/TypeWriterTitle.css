@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: var(--website-height);
+    height: 100vh;
     width: 100vw;
     overflow: hidden;
 }
