@@ -3,9 +3,23 @@
 :root {
     --title-font: Inter;
     --sub-header-font: "Space Mono", monospace;
+    --main-background: #1E1E23;
 }
 
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
+     background: 
+    linear-gradient(rgba(57,255,20,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57,255,20,0.05) 1px, transparent 1px),
+    #0d0d0d;
+    background-size: 100% 20px, 20px 100%, auto;
+    height: 100%;
+}
+
+.invis {
+    display: none;
 }

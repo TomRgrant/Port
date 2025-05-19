@@ -1,25 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
-import "../Styles/Components Styles/TypeWriterTItle.css"
-import "../Styles/Global.css"
+import "../Styles/Components Styles/TypeWriterTItle.css";
+import "../Styles/Global.css";
 
 function TypeWriterTitle() {
+  const [showTitle, setShowTitle] = useState(false);
+
   return (
     <>
-
-    <section className="title-wrapper">
-
-        <h1 className="title">Valves</h1>
-
-        <Typewriter className="sub-heading"
-            options={{
-            strings: ["Ball", "Gate", "Butterfly"],
+    <section className="intro-wrapper">
+      <div className="initialise">
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+              .typeString(">Initialising...<br>")
+              .pauseFor(1000)
+              .typeString(">Loading Thomas_Grant_Portfolio...")
+              .callFunction(() => {
+                setShowTitle(true); // Only after this, show the title
+              })
+              .start();
+          }}
+          options={{
             autoStart: true,
-            loop: true,
-            deleteSpeed: 100,
-            }}
+            loop: false,
+            delay: 50,
+            cursor: "",
+          }}
         />
-      </section>
+      </div>
+
+      {showTitle && (
+        <div className="title-wrapper">
+          <h1>Thomas Grant</h1>
+          <p className="title-description">
+            <Typewriter
+              options={{
+                strings: ["Developer", "Programmer", "Code Wizard"],
+                autoStart: true,
+                loop: true,
+                delay: 75,
+                cursor: "|",
+                deleteSpeed: 100,
+                pauseFor: 300,
+              }}
+            />
+          </p>
+        </div>
+      )}
+
+      
+    </section>
+    <h1 className="test">Test</h1>
     </>
   );
 }
