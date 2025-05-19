@@ -3,15 +3,20 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: var(--website-height);
+    width: 100vw;
+    overflow: hidden;
 }
 
 .title {
     font-family: var(--title-font);
     font-weight: 500;
+    font-size: clamp(1rem, calc(32px + 16 * ((100vw - 200px) / (768 - 568))), 7rem);
 }
 
 .Typewriter__wrapper {
     font-family: var(--title-font);
     font-weight: 400;
     font-style: italic;
+    font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
 }
