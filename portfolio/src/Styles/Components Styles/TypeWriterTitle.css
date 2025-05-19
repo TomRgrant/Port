@@ -1,24 +1,44 @@
+.intro-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Stays at the top */
+.initialise {
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-style: italic;
+  color: #39ff14; 
+  text-shadow: 0 0 5px #39ff14, 0 0 1px #39ff14;
+  font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
+}
+
+/* Fills remaining space, centers content */
 .title-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #00e0ff;
+  text-align: center;
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(1rem, calc(64px + 16 * ((100vw - 800px) / (768 - 568))), 3rem);
+  transform: translateY(-10%);
 }
 
-.title {
-    font-family: var(--title-font);
-    font-weight: 500;
-    font-size: clamp(1rem, calc(32px + 16 * ((100vw - 200px) / (768 - 568))), 7rem);
+/* Optional: style the title animation */
+.title-description {
+  margin-top: 1rem;
+  color: #39ff14;
+  font-style: italic;
+  text-shadow: 0 0 5px #39ff14, 0 0 1px #39ff14;
 }
 
-.Typewriter__wrapper {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: 400;
-    font-style: italic;
-    color: #00ff00; 
-    text-shadow: 0 0 5px #00ff00, 0 0 0px #00ff00; /* Glowy effect */
-    font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
+/* Keeping your existing test class as-is */
+.test {
+  background-color: rgba(137, 43, 226, 0.199);
+  height: 100vh;
 }
