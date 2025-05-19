@@ -26,7 +26,6 @@
   text-align: center;
   font-family: 'Fira Code', monospace;
   font-size: clamp(1rem, calc(64px + 16 * ((100vw - 800px) / (768 - 568))), 3rem);
-  transform: translateY(-10%);
 }
 
 /* Optional: style the title animation */
@@ -42,3 +41,36 @@
   background-color: rgba(137, 43, 226, 0.199);
   height: 100vh;
 }
+
+.arrow-box {
+  color: #00e0ff;
+  font-size: clamp(1rem, calc(64px + 16 * ((100vw - 800px) / (768 - 568))), 3rem);
+  margin: auto;
+  border: #39ff14 1px solid;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 5px #39ff14, 0 0 1px #39ff14;
+  margin-bottom: 20px;
+  transition: 1s;
+}
+
+.arrow-box:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
+.title-logos {
+  margin-top: 20px;
+  height: 3rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: #39ff14;
+  overflow: hidden;
+}
+
+.logo-anchors {
+  text-decoration: none;
+}
+

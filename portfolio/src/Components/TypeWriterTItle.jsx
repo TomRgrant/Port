@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 import "../Styles/Components Styles/TypeWriterTItle.css";
 import "../Styles/Global.css";
+import gitHubLogo from "../../Assets/ghlogo.png"
+import linkedInLogo from "../../Assets/linkedlogo.png"
 
 function TypeWriterTitle() {
   const [showTitle, setShowTitle] = useState(false);
@@ -14,8 +16,9 @@ function TypeWriterTitle() {
           onInit={(typewriter) => {
             typewriter
               .typeString(">Initialising...<br>")
-              .pauseFor(1000)
+              .pauseFor(700)
               .typeString(">Loading Thomas_Grant_Portfolio...")
+              .pauseFor(300)
               .callFunction(() => {
                 setShowTitle(true); // Only after this, show the title
               })
@@ -28,6 +31,14 @@ function TypeWriterTitle() {
             cursor: "",
           }}
         />
+
+        {showTitle && (
+          <div>
+            <a className="logo-anchors" href="https://github.com/TomRgrant"> <img className="title-logos" src={gitHubLogo} /> </a>
+            <a className="logo-anchors" href="https://www.linkedin.com/in/thomasgrant0/"> <img className="title-logos" src={linkedInLogo} /> </a>
+        </div>
+      )}
+        
       </div>
 
       {showTitle && (
@@ -49,6 +60,9 @@ function TypeWriterTitle() {
         </div>
       )}
 
+        <p className="arrow-box">
+          <span className="arrow-icon">⭣</span>
+        </p>
       
     </section>
     <h1 className="test">Test</h1>
