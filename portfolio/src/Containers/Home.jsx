@@ -1,5 +1,6 @@
 import React from "react";
 import TypeWriterTitle from "../Components/TypeWriterTItle";
+import Projects from "../Components/Projects";
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
 
         <>
         <TypeWriterTitle/>
+        <Projects/>
         </>
     )
 }

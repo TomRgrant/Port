@@ -65,7 +65,6 @@ function TypeWriterTitle() {
         </p>
       
     </section>
-    <h1 className="test">Test</h1>
     </>
   );
 }
