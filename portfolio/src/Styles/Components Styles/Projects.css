@@ -1,3 +1,24 @@
 .projects-wrapper {
     height: 100svh;
 }
+
+.title {
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-style: italic;
+  color: #39ff14; 
+  text-shadow: 0 0 5px #39ff14, 0 0 1px #39ff14;
+  font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
+}
+
+.title-projects {
+    color: #00e0ff;
+  font-family: 'Fira Code', monospace;
+  font-size: clamp(1rem, calc(64px + 16 * ((100vw - 800px) / (768 - 568))), 3rem);
+  text-shadow: none;
+  text-align: center;
+  margin-top: 1.5rem;
+  text-decoration: underline dashed;
+  text-underline-offset: 10px;
+}
