@@ -16,9 +16,9 @@ function TypeWriterTitle() {
           onInit={(typewriter) => {
             typewriter
               .typeString(">Initialising...<br>")
-              .pauseFor(700)
+              .pauseFor(500)
               .typeString(">Loading Thomas_Grant_Portfolio...")
-              .pauseFor(300)
+              .pauseFor(200)
               .callFunction(() => {
                 setShowTitle(true); // Only after this, show the title
               })
@@ -27,7 +27,7 @@ function TypeWriterTitle() {
           options={{
             autoStart: true,
             loop: false,
-            delay: 50,
+            delay: 30,
             cursor: "",
           }}
         />
