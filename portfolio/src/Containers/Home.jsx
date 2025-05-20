@@ -1,6 +1,6 @@
 import React from "react";
-import TypeWriterTitle from "../Components/TypeWriterTItle";
-import Projects from "../Components/Projects";
+import TypeWriterTitle from "./TypeWriterTItle";
+import Projects from "./Projects";
 
 
 function Home() {
