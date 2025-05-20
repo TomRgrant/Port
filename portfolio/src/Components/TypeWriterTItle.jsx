@@ -34,8 +34,8 @@ function TypeWriterTitle() {
 
         {showTitle && (
           <div>
-            <a className="logo-anchors" href="https://github.com/TomRgrant"> <img className="title-logos" src={gitHubLogo} /> </a>
-            <a className="logo-anchors" href="https://www.linkedin.com/in/thomasgrant0/"> <img className="title-logos" src={linkedInLogo} /> </a>
+            <a target="blank" className="logo-anchors" href="https://github.com/TomRgrant"> <img className="title-logos" src={gitHubLogo} /> </a>
+            <a target="blank" className="logo-anchors" href="https://www.linkedin.com/in/thomasgrant0/"> <img className="title-logos" src={linkedInLogo} /> </a>
         </div>
       )}
         
