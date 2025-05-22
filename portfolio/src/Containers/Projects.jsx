@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Typewriter from "typewriter-effect";
 
 
@@ -6,9 +6,25 @@ import "../Styles/Components Styles/Projects.css"
 
 function Projects() {
 
+  const [showTitle,  SetShowTitle] = useState(false)
+
     const projects = [
         {Title:"", Description:"", Img:"", Tech:[], GitHub:"", Demo:""}
     ]
+
+
+//     .example-style {
+//   animation: fade-in 3s;
+// }
+
+// @keyframes fade-in {
+//   from {
+//     opacity: 0;     maybe change this to display none and block wiht quick transition?
+//   }
+//   to {
+//     opacity: 100;
+//   }
+// }
 
 
     return(
