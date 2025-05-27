@@ -11,8 +11,8 @@ function Home() {
 
 
         <>
-        <TypeWriterTitle/>
-        <Projects/>
+        <TypeWriterTitle></TypeWriterTitle>
+        <Projects></Projects>
         </>
     )
 }
