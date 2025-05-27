@@ -1,72 +1,67 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
-
-import "../Styles/Components Styles/Projects.css"
+import "../Styles/Components Styles/Projects.css";
 
 function Projects() {
+  const sectionRef = useRef(null);
+  const [hasBeenSeen, setHasBeenSeen] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
 
-  const [showTitle,  SetShowTitle] = useState(false)
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasBeenSeen) {
+          setHasBeenSeen(true);
+          observer.unobserve(entry.target); // Only trigger once
+        }
+      },
+      { threshold: 0.5 }
+    );
 
-    const projects = [
-        {Title:"", Description:"", Img:"", Tech:[], GitHub:"", Demo:""}
-    ]
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
 
+    return () => {
+      if (sectionRef.current) observer.unobserve(sectionRef.current);
+    };
+  }, [hasBeenSeen]);
 
-//     .example-style {
-//   animation: fade-in 3s;
-// }
+  return (
+    <section id="Projects" className="projects-wrapper" ref={sectionRef}>
+      {hasBeenSeen && (
+        <div>
+          <div className="projects-title-wrapper title">
+            <Typewriter
+              onInit={(typewriter) => {
+                typewriter
+                  .typeString(">cd Thomas_grant_projects <br>")
+                  .pauseFor(700)
+                  .typeString(">Loading Thomas_Grant_Projects...")
+                  .pauseFor(300)
+                  .callFunction(() => {
+                    SetShowTitle(true); // Optional: control anything else
+                  })
+                  .start();
+              }}
+              options={{
+                autoStart: true,
+                loop: false,
+                delay: 50,
+                cursor: "",
+              }}
+            />
+            <h1 className="title-projects">Projects</h1>
+          </div>
 
-// @keyframes fade-in {
-//   from {
-//     opacity: 0;     maybe change this to display none and block wiht quick transition?
-//   }
-//   to {
-//     opacity: 100;
-//   }
-// }
-
-
-    return(
-
-        <>
-            <section className="projects-wrapper">
-
-            <div className="projects-title-wrapper title">
-
-                <Typewriter
-          onInit={(typewriter) => {
-            typewriter
-              .typeString(">cd Thomas_grant_projects <br>")
-              .pauseFor(700)
-              .typeString(">Loading Thomas_Grant_Projects...")
-              .pauseFor(300)
-              .callFunction(() => {
-                setShowTitle(true); // Only after this, show the title
-              })
-              .start();
-          }}
-          options={{
-            autoStart: true,
-            loop: false,
-            delay: 50,
-            cursor: "",
-          }}
-        />
-
-        <h1 className="title-projects">Projects</h1>
-
-            </div>
-
-            <div className="project-grid-wrapper">
-
-
-
-            </div>
-
-            </section>
-        </>
-    )
+          <div className="project-grid-wrapper">
+            {/* Your project grid content */}
+          </div>
+        </div>
+      )}
+    </section>
+  );
 }
 
-export default Projects
+export default Projects;
