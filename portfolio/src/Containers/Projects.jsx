@@ -6,7 +6,7 @@ import "../Styles/Components Styles/Projects.css";
 function Projects() {
   const sectionRef = useRef(null);
   const [hasBeenSeen, setHasBeenSeen] = useState(false);
-  const [showTitle, setShowTitle] = useState(false);
+  const [showProjects, setShowProjects] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -37,27 +37,32 @@ function Projects() {
               onInit={(typewriter) => {
                 typewriter
                   .typeString(">cd Thomas_grant_projects <br>")
-                  .pauseFor(700)
+                  .pauseFor(400)
                   .typeString(">Loading Thomas_Grant_Projects...")
-                  .pauseFor(300)
+                  .pauseFor(100)
                   .callFunction(() => {
-                    SetShowTitle(true); // Optional: control anything else
+                    setShowProjects(true); // Optional: control anything else
                   })
                   .start();
               }}
               options={{
                 autoStart: true,
                 loop: false,
-                delay: 50,
+                delay: 25,
                 cursor: "",
               }}
             />
-            <h1 className="title-projects">Projects</h1>
+            {showProjects && <h1 className="title-projects fade-in">Projects</h1>}
           </div>
 
+
+          {showProjects && (
           <div className="project-grid-wrapper">
             {/* Your project grid content */}
           </div>
+
+
+          )}
         </div>
       )}
     </section>
