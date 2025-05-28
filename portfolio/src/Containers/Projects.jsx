@@ -58,7 +58,7 @@ function Projects() {
 
           {showProjects && (
           <div className="project-grid-wrapper">
-            {/* Your project grid content */}
+            
           </div>
 
 
