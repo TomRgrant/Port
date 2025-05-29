@@ -14,7 +14,8 @@ const projectList = [
                         We built the frontend with React, and the backend in Java. It was a great challenge balancing real-time data (like tide and weather APIs) with user-friendly filtering and map features.`,
         Tech: ["js", "react", "java", "html", "css"],
         Github: "https://github.com/TomRgrant/SnorkelTrails",
-        Demo: ""
+        Demo: "",
+        oneLiner: "CodeClan duo capstone project"
     },
     {
         Title: "Mind Blank",
@@ -24,7 +25,8 @@ const projectList = [
                         The project was a great opportunity to collaborate as a team under time pressure and build a fast-paced, fun app.`,
         Tech: ["js", "react", "mongodb", "html", "css"],
         Github: "https://github.com/TomRgrant/Mind-Blank",
-        Demo: "https://www.youtube.com/watch?v=a67F0SbpY6g"
+        Demo: "https://www.youtube.com/watch?v=a67F0SbpY6g",
+        oneLiner: "1 week, 4 dev, trivia game"
     },
     {
         Title: "Who's That Pokémon?",
@@ -34,7 +36,8 @@ const projectList = [
                         It was a great chance to practice working with user input, simple game logic, and state management in React aswell as api functions.`,
         Tech: ["js", "react", "html", "css"],
         Github: "https://github.com/TomRgrant/Pokemon-api-weekend-hw",
-        Demo: "https://tomrgrant.github.io/Pokemon-api-weekend-hw/"
+        Demo: "https://tomrgrant.github.io/Pokemon-api-weekend-hw/",
+        oneLiner: "Who's That Pokemon!? api practise game project"
     }
 ];
 
