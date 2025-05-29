@@ -25,6 +25,16 @@ const projectList = [
         Tech: ["js", "react", "mongodb", "html", "css"],
         Github: "https://github.com/TomRgrant/Mind-Blank",
         Demo: "https://www.youtube.com/watch?v=a67F0SbpY6g"
+    },
+    {
+        Title: "Who's That Pokémon?",
+        Img: "",
+        Description: `Who's That Pokémon? is a simple but fun guessing game I built over a weekend as part of a CodeClan homework assignment. The app shows an image of a Pokémon, and the player has to guess its name by typing it in.
+                        If you're stuck, you can choose to skip to a new Pokémon or reveal the name. It’s a light-hearted app focused on quick interactions and a bit of nostalgia.
+                        It was a great chance to practice working with user input, simple game logic, and state management in React aswell as api functions.`,
+        Tech: ["js", "react", "html", "css"],
+        Github: "https://github.com/TomRgrant/Pokemon-api-weekend-hw",
+        Demo: "https://tomrgrant.github.io/Pokemon-api-weekend-hw/"
     }
 ];
 
