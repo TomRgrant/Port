@@ -22,9 +22,9 @@ const projectList = [
         Description: `Mind Blank is a trivia quiz game created during a one-week group project with three other developers. The app allows users to choose from different categories and difficulty levels, making for a customisable and engaging quiz experience.
                         My main contribution was building the interactive timer bar - it gradually shrinks over time, giving visual feedback on how much time is left, and automatically ends the game when time runs out. I also spent a good portion of the project on debugging and polishing functionality, while other teammates focused on CSS styling and backend development.
                         The project was a great opportunity to collaborate as a team under time pressure and build a fast-paced, fun app.`,
-        Tech: ["js", "react", "java", "html", "css"],
+        Tech: ["js", "react", "mongodb", "html", "css"],
         Github: "https://github.com/TomRgrant/Mind-Blank",
-        Demo: ""
+        Demo: "https://www.youtube.com/watch?v=a67F0SbpY6g"
     }
 ];
 
