@@ -1,3 +1,9 @@
+.project-card-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
 .project-card {
     font-family: 'Fira Code', monospace;
   font-weight: 400;
@@ -5,4 +11,25 @@
   color: #39ff14; 
   text-shadow: 0 0 5px #39ff14, 0 0 1px #39ff14;
   font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
+
+  width: 60%;
+  border: 3px solid red;
+}
+/* ---------------- mobile project card css */
+@media (max-width: 768px) {
+
+    .project-card-wrapper {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .project-card{
+        width: clamp(40%, 20rem, 80%);
+    }
+
+
+
+
+
 }

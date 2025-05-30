@@ -9,6 +9,11 @@ function ProjectCard({ project }) {
     <li key={index}>{tech}</li>
   ));
 
+  function toggleShowMoreInfo(id) {
+    const element = document.getElementById(id)
+    element.classList.toggle('invis')
+  }
+
   return (
     <div className="project-card-wrapper">
       <div className="project-card">
@@ -20,7 +25,8 @@ function ProjectCard({ project }) {
           <h1 className="project-title">{project.Title}</h1>
           <h3 className="one-liner">{project.oneLiner}</h3>
           <ul className="tech-stack">{techNodes}</ul>
-          <div className="project-expanded-info">
+          <p onClick={() => toggleShowMoreInfo(project.Title)}>^</p>
+          <div id={project.Title} className="project-expanded-info invis">
             <p className="project-description">{project.Description}</p>
             <a className="project-button" href={project.Github}>
               Github
