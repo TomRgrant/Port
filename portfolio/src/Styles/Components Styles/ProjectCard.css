@@ -1,0 +1,8 @@
+.project-card {
+    font-family: 'Fira Code', monospace;
+  font-weight: 400;
+  font-style: italic;
+  color: #39ff14; 
+  text-shadow: 0 0 5px #39ff14, 0 0 1px #39ff14;
+  font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
+}

@@ -2,6 +2,8 @@ import React, { useState, useRef, useEffect } from "react";
 import Typewriter from "typewriter-effect";
 
 import "../Styles/Components Styles/Projects.css";
+import ProjectCard from "../Components/ProjectCard";
+import projectList from "../Projects";
 
 function Projects() {
   const sectionRef = useRef(null);
@@ -28,6 +30,13 @@ function Projects() {
     };
   }, [hasBeenSeen]);
 
+
+  const projectCardsNodes = projectList.map((project, index)=>{
+    return <ProjectCard project={project} key={index}/>
+  })
+
+
+
   return (
     <section id="Projects" className="projects-wrapper" ref={sectionRef}>
       {hasBeenSeen && (
@@ -41,7 +50,7 @@ function Projects() {
                   .typeString(">Loading Thomas_Grant_Projects...")
                   .pauseFor(100)
                   .callFunction(() => {
-                    setShowProjects(true); // Optional: control anything else
+                    setShowProjects(true); 
                   })
                   .start();
               }}
@@ -58,7 +67,7 @@ function Projects() {
 
           {showProjects && (
           <div className="project-grid-wrapper">
-            
+            {projectCardsNodes}
           </div>
 
 
