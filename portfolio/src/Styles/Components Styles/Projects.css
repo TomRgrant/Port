@@ -3,6 +3,16 @@
     min-height: 100svh;
 }
 
+@media (max-width: 768px) {
+
+  .project-grid-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+}
+
 .title {
   padding: 20px;
   font-family: 'Fira Code', monospace;
@@ -20,6 +30,6 @@
   text-shadow: none;
   text-align: center;
   margin-top: 1.5rem;
-  text-decoration: underline dashed;
+  text-decoration: underline dotted;
   text-underline-offset: 10px;
 }

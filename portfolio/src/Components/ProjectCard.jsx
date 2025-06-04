@@ -8,7 +8,7 @@ function ProjectCard({ project }) {
   console.log(project);
 
   const techNodes = (project.Tech || []).map((tech, index) => (
-    <li key={index}>{tech}</li>
+    <li className="tech-node" key={index}>{tech}</li>
   ));
 
   function toggleShowMoreInfo(id) {

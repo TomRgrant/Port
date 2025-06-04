@@ -13,7 +13,6 @@
   font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
 
   width: 60%;
-  border: 3px solid red;
 }
 /* ---------------- mobile project card css */
 @media (max-width: 768px) {
@@ -27,13 +26,19 @@
 
     .project-card{
         width: clamp(40%, 20rem, 80%);
-        margin-top: 2rem;
+        box-shadow: 0 0 12px #39ff14;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.571);
     }
+
+
 
     .project-img {
         background-color: aliceblue;
         height: 10rem;
         object-fit: cover;
+        border-radius: 10px 10px 0 0;
+        overflow: hidden;
     }
 
     .project-img > img {
@@ -41,6 +46,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        
     }
 
     .project-title {
@@ -53,6 +59,20 @@
 
     h3 {
         font-size: large;
+    }
+
+    .tech-node {
+        box-shadow: 0 0 3px #39ff14;
+        width: 60px;
+        text-align: center;
+        padding: 3px;
+        background-color: #0f140e;
+    }
+
+    .tech-stack {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
     }
 
 }
