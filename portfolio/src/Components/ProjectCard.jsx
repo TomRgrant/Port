@@ -1,6 +1,8 @@
 import React from "react";
 import "../Styles/Components Styles/ProjectCard.css";
 
+import mountain from "../../Assets/mountain.jpg"
+
 // Destructure `project` properly
 function ProjectCard({ project }) {
   console.log(project);
@@ -18,7 +20,7 @@ function ProjectCard({ project }) {
     <div className="project-card-wrapper">
       <div className="project-card">
         <div className="project-img">
-          <img src={project.Img} alt={project.Alt || project.Title} />
+          <img src={mountain} alt={project.Alt || project.Title} />
         </div>
 
         <div className="project-info">
@@ -28,11 +30,11 @@ function ProjectCard({ project }) {
           <p onClick={() => toggleShowMoreInfo(project.Title)}>^</p>
           <div id={project.Title} className="project-expanded-info invis">
             <p className="project-description">{project.Description}</p>
-            <a className="project-button" href={project.Github}>
+            <a target="blank" className="project-button" href={project.Github}>
               Github
             </a>
             {project.Demo && (
-              <a className="project-button" href={project.Demo}>
+              <a target="blank" className="project-button" href={project.Demo}>
                 Demo
               </a>
             )}

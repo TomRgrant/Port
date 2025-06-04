@@ -21,15 +21,38 @@
     .project-card-wrapper {
         width: 100%;
         display: flex;
-        justify-content: center;
+        flex-direction: column;
+        align-items: center;
     }
 
     .project-card{
         width: clamp(40%, 20rem, 80%);
+        margin-top: 2rem;
     }
 
+    .project-img {
+        background-color: aliceblue;
+        height: 10rem;
+        object-fit: cover;
+    }
 
+    .project-img > img {
+        background-color: aliceblue;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
 
+    .project-title {
+        text-align: center;
+    }
 
+    .project-info {
+        padding: 10px;
+    }
+
+    h3 {
+        font-size: large;
+    }
 
 }
