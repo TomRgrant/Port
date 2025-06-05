@@ -55,6 +55,9 @@
 
     .project-info {
         padding: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
     }
 
     h3 {
@@ -74,6 +77,11 @@
         display: flex;
         flex-wrap: wrap;
         gap: 5px;
+    }
+
+    .one-liner {
+        font-size: clamp(1rem, calc(32px + 16 * ((100vw - 1000px) / (768 - 568))), 3rem);
+        text-align: center;
     }
 
 }
