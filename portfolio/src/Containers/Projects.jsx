@@ -46,9 +46,9 @@ function Projects() {
               onInit={(typewriter) => {
                 typewriter
                   .typeString(">cd Thomas_grant_projects <br>")
-                  .pauseFor(400)
+                  .pauseFor(250)
                   .typeString(">Loading Thomas_Grant_Projects...")
-                  .pauseFor(100)
+                  .pauseFor(75)
                   .callFunction(() => {
                     setShowProjects(true); 
                   })
@@ -57,7 +57,7 @@ function Projects() {
               options={{
                 autoStart: true,
                 loop: false,
-                delay: 25,
+                delay: 20,
                 cursor: "",
               }}
             />
